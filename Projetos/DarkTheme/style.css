@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body{
+    height: 100vh;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    transition: background .2s linear;
+}
+
+body.dark{
+    background: #181715;
+}
+
+h2{
+    font-size: 35px;
+    font-weight: 400;
+    color: #222;
+    position: relative;
+    text-align: center;
+    pointer-events: none;
+}
+
+h2.dark{
+    color: #fafafa;
+    transition: color .2s linear;
+}
+
+.checkbox{
+    position: absolute;
+    opacity: 0;
+}
+
+.label{
+    background: #2f2d2a;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    margin: 30px 0px 0px 60px;
+
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 24px;
+    width: 24px;
+
+    transform: translateX(0px);
+    transition: transform .2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(30px);
+}
+
+.moon{
+    color: #fafafa;
+}
+
+.sunny{
+    color: #f1c40f;
+}
